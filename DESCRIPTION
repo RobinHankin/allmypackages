@@ -9,6 +9,14 @@ Depends: aylmer, Brobdingnag, clifford, cmvnorm, Davies, disordR,
         hyper2, hypergeo, jordan, knotR, lorentz, magic, mvp, onion,
         partitions, permutations, quadform, ResistorArray,
         schwarzschild, spray, stokes, untb, vfunc, weyl
+Authors@R: person(
+	   given=c("Robin", "K. S."),
+	   family="Hankin",
+	   role = c("aut","cre"),
+	   email="hankin.robin@gmail.com",
+	   comment = c(ORCID = "0000-0001-5982-0415"))
+Maintainer: Robin K. S. Hankin <hankin.robin@gmail.com>
 Description: does nothing but Depends on all my packages
+VignetteBuilder: knitr
 License: GPL-2
 NeedsCompilation: no

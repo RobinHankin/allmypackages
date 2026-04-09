@@ -1,0 +1,56 @@
+---
+title: "allmypackages"
+author: "Robin K. S. Hankin"
+output: html_vignette
+link-citations: true
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{allmypackages}
+  %\usepackage[utf8]{inputenc}
+---
+
+```{r setup, include=FALSE}
+set.seed(0)
+knitr::opts_chunk$set(echo = TRUE)
+options(rmarkdown.html_vignette.check_title = FALSE)
+r = getOption("repos")
+r["CRAN"] = "http://cran.us.r-project.org"
+options(repos = r)
+```
+
+Here are some usage statistics for my packages.
+
+```{r, calculatedependencies}
+f <- function(package){
+    tools::package_dependencies(
+               package, which = c("Depends", "Imports", "Suggests"),
+               reverse = TRUE,
+               recursive = FALSE)[[1]]
+}
+
+packages <- c(
+ "aylmer", "Brobdingnag", "clifford", "cmvnorm",
+ "Davies", "disordR", "elliptic", "emulator",
+ "evitaicossa", "frab", "freealg", "freegroup", "gsl",
+ "hyper2", " hypergeo", "jordan", "knotR", "lorentz",
+ "magic", "mvp", "onion", "partitions", "permutations",
+ "quadform", "ResistorArray", "schwarzschild", "spray",
+ "stokes", "untb", "vfunc", "weyl"
+)
+
+L <- list()
+for(n in packages){L <- c(L, list(f(n)))}
+names(L) <- packages
+
+dependencies <- sort(unique(unlist(L)))
+```
+
+
+Now:
+
+```{r}
+head(dependencies)
+tail(dependencies)
+```
+
+We have this many dependencies.  How distributed?
