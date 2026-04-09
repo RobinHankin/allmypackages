@@ -1,0 +1,14 @@
+Package: allmypackages
+Type: Package
+Title: does nothing but depends on each of my packages
+Version: 1.0
+Author: Robin Hankin
+Maintainer: <hankin.robin@gmail.com>
+Depends: aylmer, Brobdingnag, clifford, cmvnorm, Davies, disordR,
+        elliptic, emulator, evitaicossa, frab, freealg, freegroup, gsl,
+        hyper2, hypergeo, jordan, knotR, lorentz, magic, mvp, onion,
+        partitions, permutations, quadform, ResistorArray,
+        schwarzschild, spray, stokes, untb, vfunc, weyl
+Description: does nothing but Depends on all my packages
+License: GPL-2
+NeedsCompilation: no
