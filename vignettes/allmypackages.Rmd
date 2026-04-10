@@ -49,6 +49,7 @@ dependencies <- sort(unique(unlist(L)))
 Now:
 
 ```{r}
+length(dependencies)
 head(dependencies)
 tail(dependencies)
 ```
