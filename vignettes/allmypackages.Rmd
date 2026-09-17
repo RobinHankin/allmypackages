@@ -10,6 +10,7 @@ vignette: >
 ---
 
 ```{r setup, include=FALSE}
+library("foghorn")
 set.seed(0)
 knitr::opts_chunk$set(echo = TRUE)
 options(rmarkdown.html_vignette.check_title = FALSE)
@@ -55,3 +56,12 @@ tail(dependencies)
 ```
 
 We have this many dependencies.  How distributed?
+(I will work on that)
+
+
+## CRAN warnings
+
+
+```{r warnings}
+allmypackages
+```

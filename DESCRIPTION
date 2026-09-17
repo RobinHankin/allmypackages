@@ -8,7 +8,8 @@ Depends: aylmer, Brobdingnag, clifford, cmvnorm, Davies, disordR,
         elliptic, emulator, evitaicossa, frab, freealg, freegroup, gsl,
         hyper2, hypergeo, jordan, knotR, lorentz, magic, mvp, onion,
         partitions, permutations, quadform, ResistorArray,
-        schwarzschild, spray, stokes, untb, vfunc, weyl
+        schwarzschild, spray, stokes, untb, vfunc, weyl,
+	foghorn, R (>= 4.6.0)
 Authors@R: person(
 	   given=c("Robin", "K. S."),
 	   family="Hankin",
@@ -20,3 +21,4 @@ Description: does nothing but Depends on all my packages
 VignetteBuilder: knitr
 License: GPL-2
 NeedsCompilation: no
+LazyData: yes
