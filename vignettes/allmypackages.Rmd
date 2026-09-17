@@ -63,5 +63,6 @@ We have this many dependencies.  How distributed?
 
 
 ```{r warnings}
-summary_cran_results(pkg = packages)
+# Following line takes too long and is too unreliable
+# summary_cran_results(pkg = packages)   
 ```
