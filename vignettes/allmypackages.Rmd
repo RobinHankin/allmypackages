@@ -22,23 +22,22 @@ options(repos = r)
 
 Here are some usage statistics for my packages.
 
-```{r, calculatedependencies}
+```{r, showallpackages}
+allmypackages
+```
+
+Now, for all the packages on `CRAN`, calculate their dependencies:
+
+
+```{r, calculatedependencies, cache=TRUE}
+(packages <- allmypackages[allmypackages$CRAN,1])
+
 f <- function(package){
     tools::package_dependencies(
                package, which = c("Depends", "Imports", "Suggests"),
                reverse = TRUE,
                recursive = FALSE)[[1]]
 }
-
-packages <- c(
- "aylmer", "Brobdingnag", "clifford", "cmvnorm",
- "Davies", "disordR", "elliptic", "emulator",
- "evitaicossa", "frab", "freealg", "freegroup", "gsl",
- "hyper2", " hypergeo", "jordan", "knotR", "lorentz",
- "magic", "mvp", "onion", "partitions", "permutations",
- "quadform", "ResistorArray", "schwarzschild", "spray",
- "stokes", "untb", "vfunc", "weyl"
-)
 
 L <- list()
 for(n in packages){L <- c(L, list(f(n)))}
@@ -48,7 +47,7 @@ dependencies <- sort(unique(unlist(L)))
 ```
 
 
-Now:
+Now summarise:
 
 ```{r}
 length(dependencies)
@@ -64,5 +63,5 @@ We have this many dependencies.  How distributed?
 
 
 ```{r warnings}
-allmypackages
+summary_cran_results(pkg = packages)
 ```
