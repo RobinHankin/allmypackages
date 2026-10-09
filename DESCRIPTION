@@ -7,7 +7,7 @@ Depends: aylmer, Brobdingnag, clifford, cmvnorm, contfrac, Davies, disordR,
         hyper2, hypergeo, jordan, knotR, lorentz, magic, mvp, onion,
         partitions, permutations, quadform, ResistorArray,
         schwarzschild, spray, stokes, untb, vfunc, weyl,
-	foghorn, R (>= 4.6.0)
+	foghorn, knitr, R (>= 4.6.0)
 Authors@R: person(
 	   given=c("Robin", "K. S."),
 	   family="Hankin",
