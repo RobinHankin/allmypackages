@@ -4,6 +4,7 @@ aylmer		F
 Brobdingnag	T
 clifford	T
 cmvnorm		T
+contfrac	T
 Davies		T
 disordR		T
 elliptic	T

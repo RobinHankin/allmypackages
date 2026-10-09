@@ -2,7 +2,7 @@ Package: allmypackages
 Type: Package
 Title: does nothing but depends on each of my packages
 Version: 1.0
-Depends: aylmer, Brobdingnag, clifford, cmvnorm, Davies, disordR,
+Depends: aylmer, Brobdingnag, clifford, cmvnorm, contfrac, Davies, disordR,
         elliptic, emulator, evitaicossa, frab, freealg, freegroup, gsl,
         hyper2, hypergeo, jordan, knotR, lorentz, magic, mvp, onion,
         partitions, permutations, quadform, ResistorArray,
