@@ -1,0 +1,25 @@
+---
+title: "All my packages"
+author: "R. K. S. Hankin"
+output: bookdown::html_document2
+---
+
+```{r setup, include=FALSE}
+set.seed(0)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This file reads `allmypackages.txt` and creates an `rda` file.
+
+```{r readallpacks}
+(allmypackages <- read.table("allmypackages.txt",header=TRUE))
+```
+
+
+### Package dataset {-}
+
+Following lines create `allmypackages.rda`, residing in the `data/` directory of the package.
+
+```{r,label=savepackdataset}
+save(allmypackages, file="allmypackages.rda")
+```
